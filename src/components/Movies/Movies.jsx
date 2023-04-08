@@ -31,6 +31,7 @@ function Movies() {
   const updateQueryString = query => {
     const nextParams = query !== '' ? { query } : {};
     setSearchParams(nextParams);
+    console.log(searchParams);
   };
 
   const handleChange = e => {
