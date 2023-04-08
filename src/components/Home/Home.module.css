@@ -1,0 +1,17 @@
+.li {
+  color: white;
+  text-decoration: none;
+  margin-bottom: 15px;
+}
+.li::marker {
+  color: #ffa842;
+}
+
+.listContainer {
+  margin-right: 20px;
+}
+
+.heading {
+  text-align: center;
+  margin-bottom: 30px;
+}
