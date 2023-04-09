@@ -1,0 +1,33 @@
+.info {
+  margin: 20px 9vw;
+}
+
+.infoLinks {
+  margin-bottom: 20px;
+}
+
+.heading {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.infoBtn {
+  color: white;
+  text-decoration: none;
+  margin-bottom: 10px;
+  transition: 500ms ease-in-out text-decoration;
+}
+
+.infoBtn:hover {
+  text-decoration: underline 2px solid #ffa842;
+}
+
+.infoBtn::marker {
+  color: #ffa842;
+}
+
+@media screen and (min-width: 800px) {
+  .heading {
+    margin-bottom: 20px;
+  }
+}

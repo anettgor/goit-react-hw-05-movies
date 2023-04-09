@@ -5,7 +5,7 @@ function Spinner() {
     <div
       style={{
         textAlign: 'Center',
-        marginTop: '30vh',
+        marginTop: '50px',
       }}
     >
       <BeatLoader

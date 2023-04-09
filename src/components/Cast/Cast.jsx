@@ -1,27 +1,22 @@
-import { useEffect, useState } from 'react';
-import fetchData from './../../utils/fetchMovies';
 import css from './Cast.module.css';
 import { useParams } from 'react-router-dom';
 import placeholder from './../../images/placeholder.jpg';
-
+import Spinner from './../../components/Spinner/Spinner';
+import useCast from './../../hooks/fetchCast';
 function Cast() {
   const { movieId } = useParams();
-  const [cast, setCast] = useState([]);
   const key = '7bfaca5914dfe808eee9ce7ecac1ff40';
   const URL = `
 https://api.themoviedb.org/3/movie/${movieId}/credits?api_key=${key}&language=en-US`;
+  const { isLoading, cast } = useCast(URL);
 
-  useEffect(() => {
-    const fetchCast = async () => {
-      const res = await fetchData(URL);
-      console.log(res);
-      setCast(res.cast);
-    };
-    fetchCast();
-  }, [URL]);
   return (
     <ul className={css.gallery}>
-      {cast.length > 0 &&
+      {isLoading && <Spinner />}
+      {!isLoading && cast.length === 0 && 'No cast found'}
+
+      {!isLoading &&
+        cast.length > 0 &&
         cast.map(castMember => {
           return (
             <li key={castMember.id}>
