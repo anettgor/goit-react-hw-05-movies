@@ -2,13 +2,13 @@ import css from './Cast.module.css';
 import { useParams } from 'react-router-dom';
 import placeholder from './../../images/placeholder.jpg';
 import Spinner from './../../components/Spinner/Spinner';
-import useCast from './../../hooks/fetchCast';
+import UseCast from './../../hooks/fetchCast';
 function Cast() {
   const { movieId } = useParams();
   const key = '7bfaca5914dfe808eee9ce7ecac1ff40';
   const URL = `
 https://api.themoviedb.org/3/movie/${movieId}/credits?api_key=${key}&language=en-US`;
-  const { isLoading, cast } = useCast(URL);
+  const { isLoading, cast } = UseCast(URL);
 
   return (
     <ul className={css.gallery}>

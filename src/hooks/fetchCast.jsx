@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import fetch from './../utils/fetchMovies';
 
-const useCast = url => {
+const UseCast = url => {
   const [cast, setCast] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
@@ -18,4 +18,4 @@ const useCast = url => {
   return { isLoading, cast };
 };
 
-export default useCast;
+export default UseCast;

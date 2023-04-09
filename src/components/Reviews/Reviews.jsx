@@ -1,12 +1,12 @@
 import { useParams } from 'react-router-dom';
 import css from './Review.module.css';
 import Spinner from './../../components/Spinner/Spinner';
-import useReviews from './../../hooks/fetchReviews';
+import UseReviews from './../../hooks/fetchReviews';
 function Reviews() {
   const { movieId } = useParams();
   const key = '7bfaca5914dfe808eee9ce7ecac1ff40';
   const URL = `https://api.themoviedb.org/3/movie/${movieId}/reviews?api_key=${key}&language=en-US&page=1`;
-  const { isLoading, reviews } = useReviews(URL);
+  const { isLoading, reviews } = UseReviews(URL);
 
   return (
     <>

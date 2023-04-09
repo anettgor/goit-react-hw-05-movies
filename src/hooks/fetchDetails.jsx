@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import fetchDetails from './../utils/fetchMovies';
 
-const useDetails = url => {
+const UseDetails = url => {
   const [details, setDetails] = useState();
   const [isLoading, setIsLoading] = useState(true);
 
@@ -18,4 +18,4 @@ const useDetails = url => {
   return { isLoading, details };
 };
 
-export default useDetails;
+export default UseDetails;

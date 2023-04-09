@@ -1,6 +1,6 @@
 import { useParams, useNavigate } from 'react-router-dom';
 import Spinner from './../../components/Spinner/Spinner';
-import useDetails from './../../hooks/fetchDetails';
+import UseDetails from './../../hooks/fetchDetails';
 import css from './MovieDetails.module.css';
 import api from './../../utils/api';
 import Additional from './../../components/DetailsAdditional/DetailsAdditional';
@@ -9,7 +9,7 @@ export default function MovieDetails() {
   const { movieId } = useParams();
   const navigate = useNavigate();
   const URL = `${api.baseurl}movie/${movieId}?api_key=${api.key}&language=en-US`;
-  const { isLoading, details } = useDetails(URL);
+  const { isLoading, details } = UseDetails(URL);
 
   return (
     <>

@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import fetchReviews from './../utils/fetchMovies';
 
-const useReviews = url => {
+const UseReviews = url => {
   const [reviews, setReviews] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
@@ -17,4 +17,4 @@ const useReviews = url => {
   return { isLoading, reviews };
 };
 
-export default useReviews;
+export default UseReviews;

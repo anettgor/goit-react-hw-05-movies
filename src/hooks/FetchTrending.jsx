@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import fetchMovies from './../utils/fetchMovies';
 
-const useTrends = url => {
+const Trending = url => {
   const [movies, setMovies] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
@@ -18,4 +18,4 @@ const useTrends = url => {
   return { isLoading, movies };
 };
 
-export default useTrends;
+export default Trending;

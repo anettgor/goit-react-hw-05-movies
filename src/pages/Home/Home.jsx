@@ -2,11 +2,11 @@ import React from 'react';
 import Spinner from './../../components/Spinner/Spinner';
 import css from './Home.module.css';
 import { Link } from 'react-router-dom';
-import useTrends from './../../hooks/fetchTrending';
+import Trending from './../../hooks/fetchTrending';
 function HomePage() {
   const key = '7bfaca5914dfe808eee9ce7ecac1ff40';
   const URL = `https://api.themoviedb.org/3/trending/movie/day?api_key=${key}`;
-  const { isLoading, movies } = useTrends(URL);
+  const { isLoading, movies } = Trending(URL);
 
   return (
     <div>
