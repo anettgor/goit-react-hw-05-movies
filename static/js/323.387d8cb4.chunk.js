@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkgoit_react_hw_05_movies=self.webpackChunkgoit_react_hw_05_movies||[]).push([[323],{3323:function(e,t,o){o.r(t),o.d(t,{default:function(){return a}});var r="Footer_footer__kXlYa",_=o(184);var a=function(){return(0,_.jsx)("footer",{className:r})}}}]);
+//# sourceMappingURL=323.387d8cb4.chunk.js.map
