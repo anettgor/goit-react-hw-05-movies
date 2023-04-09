@@ -1,4 +1,6 @@
 {
   "key": "7bfaca5914dfe808eee9ce7ecac1ff40",
-  "url": "https://api.themoviedb.org/3/"
+  "baseurl": "https://api.themoviedb.org/3/",
+  "imgurl": "https://image.tmdb.org/t/p/w500",
+  "casturl": "https://image.tmdb.org/t/p/w200"
 }
