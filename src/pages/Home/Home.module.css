@@ -2,9 +2,15 @@
   color: white;
   text-decoration: none;
   margin-bottom: 15px;
+  transition: 500ms ease-in-out text-decoration;
 }
 .li::marker {
   color: #ffa842;
+}
+
+.li:hover,
+.li:focus {
+  text-decoration: underline 2px solid #ffa842;
 }
 
 .listContainer {
@@ -19,6 +25,9 @@
 @media screen and (min-width: 768px) {
   .container {
     margin: 0 auto;
-    max-width: 80vw;
+    max-width: 70vw;
+  }
+  .li {
+    margin-bottom: 25px;
   }
 }

@@ -12,7 +12,7 @@ export default function MovieDetails() {
   const { isLoading, details } = UseDetails(URL);
 
   return (
-    <>
+    <div className={css.mainContainer}>
       <button
         className={css.btn}
         type="button"
@@ -41,7 +41,10 @@ export default function MovieDetails() {
                   ({details.release_date && details.release_date.slice(0, 4)})
                 </span>
               </h1>
-              <p>User Score: {Math.round(details.vote_average * 10)}%</p>
+              <p>
+                <span className={css.score}>User Score: </span>
+                {Math.round(details.vote_average * 10)}%
+              </p>
             </div>
 
             <div>
@@ -62,6 +65,6 @@ export default function MovieDetails() {
         </div>
       )}
       <Additional />
-    </>
+    </div>
   );
 }
