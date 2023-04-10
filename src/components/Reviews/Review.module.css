@@ -1,14 +1,17 @@
 .review {
   list-style-type: none;
+  padding-top: 30px;
 }
 .review:not(:last-of-type) {
-  margin-bottom: 30px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #646464;
 }
 
 .heading {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   color: #d9dde1;
 }
+
 .mainHeading {
   margin-top: 30px;
   margin-bottom: 30px;
@@ -17,8 +20,15 @@
 .text {
   font-size: 0.9rem;
   color: #cbcfd2;
+  text-align: justify;
 }
 
 .container {
   padding: 0;
+}
+
+.note {
+  font-size: 0.7rem;
+  margin-top: 35px;
+  color: #9c9d9e;
 }

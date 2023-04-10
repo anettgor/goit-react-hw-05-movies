@@ -22,8 +22,10 @@ function Reviews() {
               return (
                 <li key={review.id} className={css.review}>
                   <h4 className={css.heading}>{review.author}</h4>
-
                   <p className={css.text}>{review.content}</p>
+                  <p className={css.note}>
+                    Posted at: {review.created_at.slice(0, 10)}
+                  </p>
                 </li>
               );
             })}

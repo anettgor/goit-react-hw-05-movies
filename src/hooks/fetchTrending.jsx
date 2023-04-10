@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import fetchMovies from './../utils/fetchMovies';
+import PropTypes from 'prop-types';
 
 const Trending = url => {
   const [movies, setMovies] = useState([]);
@@ -16,6 +17,10 @@ const Trending = url => {
   }, [url]);
 
   return { isLoading, movies };
+};
+
+Trending.propTypes = {
+  url: PropTypes.string,
 };
 
 export default Trending;

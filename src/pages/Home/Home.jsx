@@ -9,7 +9,7 @@ function HomePage() {
   const { isLoading, movies } = Trending(URL);
 
   return (
-    <div>
+    <div className={css.container}>
       <h1 className={css.heading}>Trending today</h1>
       {isLoading && <Spinner />}
       <ul className={css.listContainer}>

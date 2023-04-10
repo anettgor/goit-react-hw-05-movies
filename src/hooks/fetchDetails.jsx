@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import fetchDetails from './../utils/fetchMovies';
+import PropTypes from 'prop-types';
 
 const UseDetails = url => {
   const [details, setDetails] = useState();
@@ -16,6 +17,10 @@ const UseDetails = url => {
   }, [url]);
 
   return { isLoading, details };
+};
+
+UseDetails.propTypes = {
+  url: PropTypes.string,
 };
 
 export default UseDetails;

@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import fetch from './../utils/fetchMovies';
+import PropTypes from 'prop-types';
 
 const UseCast = url => {
   const [cast, setCast] = useState([]);
@@ -16,6 +17,10 @@ const UseCast = url => {
   }, [url]);
 
   return { isLoading, cast };
+};
+
+UseCast.propTypes = {
+  url: PropTypes.string,
 };
 
 export default UseCast;
